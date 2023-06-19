@@ -34,5 +34,5 @@ def file_metadata(instance, position):
     try:
         queue_element = instance.search(position)
         sys.stdout.write(f'{queue_element}')
-    except:
+    except IndexError:
         print('Posição inválida', file=sys.stderr)
