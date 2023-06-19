@@ -16,12 +16,12 @@ def process(path_file, instance):
     }
 
     instance.enqueue(queue_element)
-    print(str(queue_element), file=sys.stdout)
+    print(queue_element, file=sys.stdout)
     # redireciona o print para saída padrão (stdout)
 
 
 def remove(instance):
-    if instance.__len__() == 0:
+    if not instance.__len__():
         print('Não há elementos', file=sys.stdout)
     else:
         item_removed = instance.dequeue()
@@ -31,4 +31,8 @@ def remove(instance):
 
 
 def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    try:
+        queue_element = instance.search(position)
+        sys.stdout.write(f'{queue_element}')
+    except:
+        print('Posição inválida', file=sys.stderr)
