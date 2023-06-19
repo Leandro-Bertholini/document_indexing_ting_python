@@ -9,12 +9,13 @@ def exists_word(word, instance):
 
         if word_rows:
             found_files.append({
-        "palavra": word,
-        "arquivo": instance.search(i)['nome_do_arquivo'],
-        "ocorrencias": word_rows,
-    })
+                "palavra": word,
+                "arquivo": instance.search(i)['nome_do_arquivo'],
+                "ocorrencias": word_rows,
+            })
 
     return found_files
+
 
 def search_by_word(word, instance):
     """Aqui irá sua implementação"""
