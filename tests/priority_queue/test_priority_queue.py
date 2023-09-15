@@ -20,3 +20,8 @@ def test_basic_priority_queueing():
         has_priority.search(1)
 
     assert str(e.value) == "Índice Inválido ou Inexistente"
+    
+# dica: ***
+# Para usar a mensagem com o tipo de erro dentro do raises    
+# with pytest.raises(TypeError, match="tipo inválido para message"):
+#     # Código que deve gerar a exceção
